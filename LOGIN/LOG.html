@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="LOG1.css">
+</head>
+<body>
+    <div class="hero">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://player.vimeo.com/external/333365608.sd.mp4?s=128ff523b817ceebe4185389ae7cb8863ea0ae0a&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+        <div class="form-box">
+            
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                <button type="button" class="toggle-btn" onclick="register()">register</button>
+            </div>
+            <div class="social-icons">
+                <img src="https://cdn-icons-png.flaticon.com/128/3488/3488287.png">
+                <img src="https://cdn-icons-png.flaticon.com/128/3488/3488309.png">
+                <img src="https://cdn-icons-png.flaticon.com/128/536/536453.png">
+            
+    
+            </div>
+            <form  id="login"class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="Email" class="input-field" placeholder="Email Id" required>
+                <input type="text" class="input-field" placeholder="password" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+       
+
+    </div>
+    <script>
+        var x= document.getElementById("login");
+        var y= document.getElementById("register");
+        var z= document.getElementById("btn");
+        function register(){
+            x.style.left="-400px"
+            y.style.left="50px"
+            z.style.left="110px"
+        }
+        function login(){
+            x.style.left="50px"
+            y.style.left="450px"
+            z.style.left="0"
+        }
+    </script>
+</body>
+</html>

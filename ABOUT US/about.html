@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>page</title>
+    <link rel="stylesheet" href="aboutds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Easy ✈Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../MAIN PAGE/PAGE.html">Home</a>
+                <a href="../LOGIN/">Log in</a>
+                <a href="../OUR OFFERS/shocard.html">Explore</a>
+                <a href="../ABOUT US/about.html">About us</a>
+                <a href="../CONTACT US/contact.html">Contact us</a>
+
+            </div>
+        </div>
+    </header>
+    <section class="home">
+       <div class="content">
+            <h1>who we <br> <span>are?</span></h1>
+            <div class="video-container">
+                <video src="C:\Users\HP\Downloads\pub.mp4" controls autoplay ></video>
+
+            </div>
+
+            
+            
+           
+          
+        </div>
+          
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+        </div>
+        
+    </section>
+   
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",()=>{ 
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+        //javascript video slider
+        const btns= document.querySelectorAll(".nav-btn");
+        const slides= document.querySelectorAll(".video-slide");
+
+        var sliderNav = function(manual){
+            btns.forEach((btn)=>{
+                btn.classList.remove("active");
+            });
+
+            slides.forEach((slide)=>{
+                slide.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+        }
+        btns.forEach((btn, i)=>{
+            btn.addEventListener("click",()=>{
+                sliderNav(i);
+            });
+        });
+    </script>
+    
+</body>
+</html>
